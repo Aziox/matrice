@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>matrice</title>
+</head>
+<body>
+	<form onsubmit="return false"> 
+		<select id="matriceChoise" onchange="createMatrice();">
+			<option selected disabled value="0">matrice</option>
+			<option value="4">2x2</option>
+			<option value="9">3x3</option>
+		</select>
+		<table>
+			<tbody id="generateTab"></tbody>	
+		</table>
+		<input type="submit" name="calcul" value="zebi" id="calcul" onclick="getNumber();" />
+	</form>
+	<script type="text/javascript" src="assets/js/matrice.js"></script>
+</body>
+</html>
