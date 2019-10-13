@@ -1,19 +1,16 @@
-var result2x;
-var result3x;
+//déclaration des diverses variables
+var result2x, result3x;
 var matriceSelect;
-//calcul du 2*2
+//calcul pour le 2*2
 function matrice2x(nc1, nc2, nc3, nc4){
-	var nbr1;
-	var nbr2;
+	var nbr1, nbr2;
 	nbr1 = nc1 * nc4;
 	nbr2 = nc2 * nc3;
 	result2x = nbr1 - nbr2;
 }
 //calcul pour le 3*3
 function matrice3x(nc1, nc2, nc3, nc4, nc5, nc6, nc7, nc8, nc9){
-var A ;
-var B ;
-var C ;
+var A, B, C;
 matrice2x(nc5, nc6, nc8, nc9);
 A = nc1 * result2x;
 matrice2x(nc2, nc3, nc8, nc9);

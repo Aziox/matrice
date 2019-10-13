@@ -1,35 +1,16 @@
-var matriceSelect;
-function createMatrice(){
-	
-	
-	matriceSelect = document.getElementById("matriceChoise").value;
-	
-	if (matriceSelect == 4 ) {
+	function MC(){
+		var idCellule = 0;
+		var matriceSelect;
+		var tab ='';
+		matriceSelect = document.getElementById("matriceChoise").value;
 
-		var tab = '<tr>';
-		for (var ic = 1; ic <= 2; ic++) {
-			tab = tab + '<td> <input type="number" name="n' + ic +'" value="0" id="n' + ic + '" /> </td>';	
+		for (var i = 1; i <= matriceSelect; i++) {
+			tab = tab + '<tr>';
+			for (var ic = 1; ic <= matriceSelect; ic++) {
+				idCellule ++;
+				tab = tab + '<td> <input type="number" name="n' + idCellule +'" value="0" id="n' + idCellule + '" /> </td>';	
+			}
+			tab = tab + '</tr>';
 		}
-		var tab = tab + "</tr><tr>";
-		for (var ic = 3; ic <= 4; ic++) {
-			tab = tab + '<td> <input type="number" name="n' + ic +'" value="0" id="n' + ic + '" /> </td>';	
-		}
-		var tab = tab + '</tr>';
 		document.getElementById("generateTab").innerHTML = tab;
-	} else if (matriceSelect == 9){
-		var tab = '<tr>';
-		for (var ic = 1; ic <= 3; ic++) {
-			tab = tab + '<td> <input type="number" name="n' + ic +'" value="0" id="n' + ic + '" /> </td>';	
-		}
-		var tab = tab + "</tr><tr>";
-		for (var ic = 4; ic <= 6; ic++) {
-			tab = tab + '<td> <input type="number" name="n' + ic +'" value="0" id="n' + ic + '" /> </td>';	
-		}
-		var tab = tab + "</tr><tr>";
-		for (var ic = 7; ic <= 9; ic++) {
-			tab = tab + '<td> <input type="number" name="n' + ic +'" value="0" id="n' + ic + '" /> </td>';	
-		}
-		var tab = tab + '</tr>';
-		document.getElementById("generateTab").innerHTML = tab;
-	}
-} 
+	} 
