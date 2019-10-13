@@ -3,22 +3,22 @@ var result2x;
 var result3x;
 var matriceSelect;
 //calcul pour le 2*2
-function matrice2x(nc1, nc2, nc3, nc4){
+function matrice2x(...nc){
 	var nbr1;
 	var nbr2;
-	nbr1 = nc1 * nc4;
-	nbr2 = nc2 * nc3;
+	nbr1 = nc[0] * nc[3];
+	nbr2 = nc[1] * nc[2];
 	result2x = nbr1 - nbr2;
 };
 //calcul pour le 3*3
-function matrice3x(nc1, nc2, nc3, nc4, nc5, nc6, nc7, nc8, nc9){
+function matrice3x(...nc){
 	var A, B, C;
-	matrice2x(nc5, nc6, nc8, nc9);
-	A = nc1 * result2x;
-	matrice2x(nc2, nc3, nc8, nc9);
-	B = nc4 * result2x;
-	matrice2x(nc2, nc3, nc5, nc6);
-	C = nc7 * result2x;
+	matrice2x(nc[4], nc[5], nc[7], nc[8]);
+	A = nc[0] * result2x;
+	matrice2x(nc[1], nc[2], nc[7], nc[8]);
+	B = nc[3] * result2x;
+	matrice2x(nc[1], nc[2], nc[4], nc[5]);
+	C = nc[6] * result2x;
 	result3x = A - B + C;
 };
 function getNumber() {
